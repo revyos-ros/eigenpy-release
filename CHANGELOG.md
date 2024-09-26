@@ -6,19 +6,31 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
-## [3.9.0] - 2024-08-31
+## [3.9.1] - 2024-09-19
+
+### Added
+
+- Add test returning reference of std::pair ([#503](https://github.com/stack-of-tasks/eigenpy/pull/503))
+- Add more general visitor `GenericMapPythonVisitor` for map types test `boost::unordered_map<std::string, int>` ([#504](https://github.com/stack-of-tasks/eigenpy/pull/504))
+- Support for non-[default-contructible](https://en.cppreference.com/w/cpp/named_req/DefaultConstructible) types in map types ([#504](https://github.com/stack-of-tasks/eigenpy/pull/504))
+- Add type_info helpers ([#502](https://github.com/stack-of-tasks/eigenpy/pull/502))
 
 ### Changed
 
-- The `exposeStdVectorEigenSpecificType()` template function now takes the vector allocator as a template parameter.
+- Move `StdMapPythonVisitor` out of `eigenpy::python` namespace, which was a mistake ([#504](https://github.com/stack-of-tasks/eigenpy/pull/504))
+
+## [3.9.0] - 2024-08-31
+
+### Changed
+- The `exposeStdVectorEigenSpecificType()` template function now takes the vector allocator as a template parameter ([#500](https://github.com/stack-of-tasks/eigenpy/pull/500))
+
+### Added
+- Add bp::dist to std::map converter ([#499](https://github.com/stack-of-tasks/eigenpy/pull/499))
 
 ## [3.8.2] - 2024-08-26
 
 ### Fixed
 - Fix function signature on Windows ([#494](https://github.com/stack-of-tasks/eigenpy/pull/494))
-
-### Added
-- Add bp::dist to std::map converter ([#499](https://github.com/stack-of-tasks/eigenpy/pull/499))
 
 ## [3.8.1] - 2024-08-25
 
@@ -673,7 +685,8 @@ One can now easily expose C++ struct containing Eigen objects in Python avoiding
 
 ## [1.0.0] - 2014-07-18
 
-[Unreleased]: https://github.com/stack-of-tasks/eigenpy/compare/v3.9.0...HEAD
+[Unreleased]: https://github.com/stack-of-tasks/eigenpy/compare/v3.9.1...HEAD
+[3.9.1]: https://github.com/stack-of-tasks/eigenpy/compare/v3.9.0...v3.9.1
 [3.9.0]: https://github.com/stack-of-tasks/eigenpy/compare/v3.8.2...v3.9.0
 [3.8.2]: https://github.com/stack-of-tasks/eigenpy/compare/v3.8.1...v3.8.2
 [3.8.1]: https://github.com/stack-of-tasks/eigenpy/compare/v3.8.0...v3.8.1
