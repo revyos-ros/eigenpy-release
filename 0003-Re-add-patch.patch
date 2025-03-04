@@ -1,4 +1,4 @@
-From 07d3d830d1c59813254a2f48a6756193d3ce9a45 Mon Sep 17 00:00:00 2001
+From 30ce040377eae389df53872903a5d7ba6bd5419a Mon Sep 17 00:00:00 2001
 From: Wolfgang Merkt <w.merkt@gmail.com>
 Date: Fri, 7 Jun 2024 16:18:31 +0100
 Subject: [PATCH 3/3] Re-add patch
@@ -8,16 +8,18 @@ Subject: [PATCH 3/3] Re-add patch
  1 file changed, 1 insertion(+), 4 deletions(-)
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 21f73e5..08f8d31 100644
+index ccbbc46..99b4d9a 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -68,15 +68,12 @@ option(INSTALL_DOCUMENTATION "Generate and install the documentation" OFF)
+@@ -72,6 +72,7 @@ option(INSTALL_DOCUMENTATION "Generate and install the documentation" OFF)
  option(SUFFIX_SO_VERSION "Suffix library name with its version" OFF)
  option(BUILD_TESTING_SCIPY
         "Build the SciPy tests (scipy should be installed on the machine)" ON)
 +option(PYTHON_STANDARD_LAYOUT "Enable standard Python package layout" ON)
  
- include("${JRL_CMAKE_MODULES}/base.cmake")
+ # Use BoostConfig module distributed by boost library instead of using FindBoost
+ # module distributed by CMake
+@@ -82,10 +83,6 @@ include("${JRL_CMAKE_MODULES}/base.cmake")
  compute_project_args(PROJECT_ARGS LANGUAGES CXX)
  project(${PROJECT_NAME} ${PROJECT_ARGS})
  
@@ -29,5 +31,5 @@ index 21f73e5..08f8d31 100644
  include("${JRL_CMAKE_MODULES}/python.cmake")
  include("${JRL_CMAKE_MODULES}/ide.cmake")
 -- 
-2.45.2
+2.48.1
 
