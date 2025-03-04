@@ -1,3 +1,26 @@
+## eigenpy (humble) - 3.10.3-1
+
+The packages in the `eigenpy` repository were released into the `humble` distro by running `/root/venv/bin/bloom-release -r humble eigenpy --override-release-repository-push-url git@github.com:revyos-ros/eigenpy-release.git` on `Tue, 04 Mar 2025 05:18:08 -0000`
+
+The `eigenpy` package was released.
+
+Version of package(s) in repository `eigenpy`:
+
+- upstream repository: https://github.com/stack-of-tasks/eigenpy.git
+- release repository: https://github.com/revyos-ros/eigenpy-release.git
+- rosdistro version: `3.10.3-1`
+- old version: `3.9.0-1`
+- new version: `3.10.3-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## eigenpy (jazzy) - 3.9.1-1
 
 The packages in the `eigenpy` repository were released into the `jazzy` distro by running `/home/z572/gits/revyos-ros/venv2/bin/bloom-release -r jazzy eigenpy --override-release-repository-push-url git@github.com:revyos-ros/eigenpy-release.git` on `Thu, 26 Sep 2024 06:10:09 -0000`
