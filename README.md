@@ -25,11 +25,11 @@ EigenPy — Versatile and efficient Python bindings between Numpy and Eigen
 - extended API to expose several STL types and some of their Boost equivalents: `optional` types, `std::pair`, maps, variants...
 - full support of vectorization between C++ and Python (all the hold objects are properly aligned in memory)
 
-## Setup
+## Installation
 
 The installation of **EigenPy** on your computer is made easy for Linux/BSD, Mac OS X, and Windows environments.
 
-### The Conda approach
+### Conda
 
 You simply need this simple line:
 ```bash
@@ -41,6 +41,7 @@ conda install eigenpy -c conda-forge
 You can easily install **EigenPy** from binaries.
 
 #### Add robotpkg apt repository
+
 1. Add robotpkg as source repository to apt:
 ```
 sudo sh -c "echo 'deb [arch=amd64] http://robotpkg.openrobots.org/packages/debian/pub $(lsb_release -cs) robotpkg' >> /etc/apt/sources.list.d/robotpkg.list"
@@ -55,6 +56,7 @@ sudo apt-get update
 ```
 
 #### Install EigenPy
+
 4. The installation of **EigenPy** and its dependencies is made through the line:
 
 ```bash
@@ -75,9 +77,9 @@ and then install **EigenPy** for Python 3.x with:
 brew install eigenpy
 ```
 
-## Contributing
+## Build
 
-Standard matrix decomposion routines of Eigen such as the SVD and QR decompositions can be readily added to **EigenPy** following the example of the Cholesky decomposition that is already implemented. Feel free to open a PR if you wrap them for your use case.
+Build instruction can be found [here](./development/build.md)
 
 ## Credits
 
