@@ -59,11 +59,6 @@ endfunction()
 set(CXX_DISABLE_WERROR True)
 set(CMAKE_VERBOSE_MAKEFILE True)
 
-# Patches
-if(NOT DEFINED CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE Release)
-endif()
-
 # ----------------------------------------------------
 # --- OPTIONS  ---------------------------------------
 # Need to be set before including base.cmake
@@ -72,7 +67,6 @@ option(INSTALL_DOCUMENTATION "Generate and install the documentation" OFF)
 option(SUFFIX_SO_VERSION "Suffix library name with its version" OFF)
 option(BUILD_TESTING_SCIPY
        "Build the SciPy tests (scipy should be installed on the machine)" ON)
-option(PYTHON_STANDARD_LAYOUT "Enable standard Python package layout" ON)
 
 # ----------------------------------------------------
 # --- Policy -----------------------------------------
